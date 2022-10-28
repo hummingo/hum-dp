@@ -1,10 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
+
 project(hum-dp)
+
+set(CMAKE_CXX_STANDARD 11)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "open compile_command.json for clangd")
 # option(CMAKE_EXPORT_COMPILE_COMMANDS "open compile_command.json for clangd" ON)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+
+add_compile_definitions(DEBUG)
+
 include(utils)
 
 link_directories(${CMAKE_BINARY_DIR})
